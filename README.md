@@ -7,7 +7,7 @@ Repository containing code, documentation and other about my master's degree the
 * Documentation and the master's degree thesis are mainly in italian.
 
 ## What you find here
-* **Thesis_2.3.pdf** Start here to understand this project
+* **Thesis_2.3.pdf** Start [here](https://github.com/Newaysfactory/RocketRollControlSystem/blob/036ea757c4abbbe03a6e53f3893280afd1d1502c/Thesis_2.3%20-%20Active%20roll%20control%20system%20for%20a%20model%20rocket%20-%20Design%20implementation%20and%20experimental%20validation.pdf))  to understand this project
 * **License** This project is under GNU General Public License v3.0
 * **FlightTrialsLogbook** Logbook of the six experimental fligts I did with the roll control system
 * **Electronics -> Firmware** The source code of the roll control system in C language. Open it with Microchip MPLAB IDE. Under "File per MPLAB Simulator" it also contains some stimuli file I used to test the system on bench
