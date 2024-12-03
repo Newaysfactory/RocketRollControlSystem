@@ -1,0 +1,60 @@
+## SCL Builder Setup File: Do not edit!!
+
+## VERSION: 3.60.00.00
+## FORMAT:  v2.00.01
+## DEVICE:  PIC18F2553
+
+## PINREGACTIONS
+cyc
+No Repeat
+--
+0
+--
+&
+## ADVPINREGACTIONS
+PIR1.SSPIF
+--
+&
+--
+COND1
+SFR
+ADRESH
+=
+00
+
+
+
+--
+&
+## CLOCK
+&
+## STIMULUSFILE
+SPI
+PIR1
+PC = 
+7508
+1
+File per MPLAB Simulator\Stimolo azzeramento PIR1 per SPI.txt
+Dec
+Yes
+(optional)
+--
+ADC
+ADRESL
+Demand
+0000
+1
+Stimolo ADC.txt
+Dec
+Yes
+(optional)
+--
+&
+## RESPONSEFILE
+&
+## ASYNCH
+&
+## ADVANCEDSCL
+
+1
+&

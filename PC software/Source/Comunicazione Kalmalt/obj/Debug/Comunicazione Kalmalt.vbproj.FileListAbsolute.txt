@@ -1,0 +1,11 @@
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Debug\Comunicazione Kalmalt.exe
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Debug\Comunicazione Kalmalt.pdb
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Debug\Comunicazione Kalmalt.xml
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\ResolveAssemblyReference.cache
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\USBTemplate1.frmUSB.resources
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\USBTemplate1.Resources.resources
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Comunicazione Kalmalt.exe
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Comunicazione Kalmalt.xml
+D:\Documenti\Visual Studio 2010\Projects\Comunicazione KalmAlt\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Comunicazione Kalmalt.pdb

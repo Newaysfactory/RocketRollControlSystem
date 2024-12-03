@@ -1,0 +1,16 @@
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Release\Software Tesi Magistrale.exe
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Release\Software Tesi Magistrale.pdb
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Release\Software Tesi Magistrale.xml
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Release\it\Software Tesi Magistrale.resources.dll
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\bin\Release\zu-ZA\Software Tesi Magistrale.resources.dll
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software_Tesi_Magistrale.About.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software_Tesi_Magistrale.Principale.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software_Tesi_Magistrale.Resources.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software_Tesi_Magistrale.Principale.it.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software_Tesi_Magistrale.Principale.zu-ZA.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\it\Software Tesi Magistrale.resources.dll
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\zu-ZA\Software Tesi Magistrale.resources.dll
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software Tesi Magistrale.exe
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software Tesi Magistrale.xml
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Release\Software Tesi Magistrale.pdb

@@ -1,0 +1,12 @@
+15:29 23/02/2012
+Error codes emitted by the electronics using the buzzer
+1)  n/a
+2)  Battery low
+3)  Pressure sensor out of range   
+4)  Gyroscope X axis (yaw) out of range
+5)  Gyroscope Y axis (pitch) out of range
+6)  Gyroscope Z axis (roll) out of range
+7)  High G accelerometer out of range
+8)  n/a
+9)  Non existing program number
+10) Error in the circular buffer

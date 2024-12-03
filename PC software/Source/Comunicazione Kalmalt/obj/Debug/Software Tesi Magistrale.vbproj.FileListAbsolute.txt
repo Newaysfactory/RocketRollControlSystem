@@ -1,0 +1,8 @@
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Software_Tesi_Magistrale.About.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Software_Tesi_Magistrale.Principale.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Software_Tesi_Magistrale.Resources.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Software_Tesi_Magistrale.Principale.it.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\Software_Tesi_Magistrale.Principale.zu-ZA.resources
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Adriano\Documents\Università\Tesi Magistrale\Elettronica\Programma lato PC\Comunicazione KalmAlt Evoluta\Comunicazione Kalmalt\Comunicazione Kalmalt\obj\Debug\GenerateResource-ResGen.write.1.tlog

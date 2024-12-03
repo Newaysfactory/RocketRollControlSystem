@@ -1,0 +1,896 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     35456,        887]
+NotebookOptionsPosition[     33539,        819]
+NotebookOutlinePosition[     33984,        836]
+CellTagsIndexPosition[     33941,        833]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"forzeXwind", "=", 
+  RowBox[{"TrigExpand", "[", 
+   RowBox[{
+    RowBox[{
+    "T", "+", "\[CapitalDelta]T", "-", "d", "-", "\[CapitalDelta]d", "-", 
+     RowBox[{"m", "*", "g", "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}], "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Psi]", "+", "\[CapitalDelta]\[Psi]"}], "]"}]}]}], "==", 
+    RowBox[{"mV", "'"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5382934587231817`*^9, 3.538293473935052*^9}, {
+  3.5382935351095514`*^9, 3.5382936293249397`*^9}, {3.5383917277378488`*^9, 
+  3.5383917355302944`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "d"}], "+", "T", "-", "\[CapitalDelta]d", "+", 
+   "\[CapitalDelta]T", "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  SuperscriptBox["mV", "\[Prime]",
+   MultilineFunction->None]}]], "Output",
+ CellChangeTimes->{{3.5383917390594964`*^9, 3.5383917528602858`*^9}, 
+   3.538391891965242*^9, 3.538394272285389*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "anche", " ", "se", " ", "in", " ", "realt\[AGrave]", " ", "\[Phi]", " ",
+       "non", " ", "compare", " ", "proprio", " ", "in", " ", "questa", " ", 
+      "equazione"}], ")"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"forzeXwind", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{"\[CapitalPhi]", "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.5382938463953557`*^9, 3.5382938496655426`*^9}, {
+  3.538391757762566*^9, 3.538391766730079*^9}, {3.5383940200299606`*^9, 
+  3.5383940519247847`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "d"}], "+", "T", "-", "\[CapitalDelta]d", "+", 
+   "\[CapitalDelta]T", "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Theta]", " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Psi]", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  SuperscriptBox["mV", "\[Prime]",
+   MultilineFunction->None]}]], "Output",
+ CellChangeTimes->{3.538293786768945*^9, 3.5383917711593323`*^9, 
+  3.5383918920252457`*^9, 3.5383940256282806`*^9, 3.538394272341392*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.5382936769866657`*^9, 3.5382936813349147`*^9}, 
+   3.538293859321095*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"forzeYwind", "=", 
+  RowBox[{"TrigExpand", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "Y"}], "+", "\[CapitalDelta]Y", "-", 
+     RowBox[{"m", "*", "g", "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}], 
+      "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}], "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Psi]", "+", "\[CapitalDelta]\[Psi]"}], "]"}]}], "+", 
+     RowBox[{"m", "*", "g", "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}], 
+      "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Psi]", "+", "\[CapitalDelta]\[Psi]"}], "]"}]}]}], 
+    "\[Equal]", 
+    RowBox[{"m", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"v", "'"}], "+", 
+       RowBox[{"Ve", "*", "r"}]}], ")"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.538289678868987*^9, 3.5382896801730614`*^9}, {
+  3.538289712267897*^9, 3.5382898902880793`*^9}, {3.5382900739885864`*^9, 
+  3.538290074545618*^9}, {3.538290152122055*^9, 3.5382901814707336`*^9}, {
+  3.5382934762681856`*^9, 3.5382934767072105`*^9}, {3.538372471946604*^9, 
+  3.538372474290738*^9}, {3.538391776419633*^9, 3.538391777865716*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Y", "+", "\[CapitalDelta]Y", "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"m", " ", "r", " ", "Ve"}], "+", 
+   RowBox[{"m", " ", 
+    SuperscriptBox["v", "\[Prime]",
+     MultilineFunction->None]}]}]}]], "Output",
+ CellChangeTimes->{3.538391325272829*^9, 3.538391782203964*^9, 
+  3.538391892076248*^9, 3.5383942723913946`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"forzeYwind", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{"\[CapitalPhi]", "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.538291377642151*^9, 3.5382913954331684`*^9}, {
+   3.5382914768398247`*^9, 3.5382915805787582`*^9}, {3.5382916863448076`*^9, 
+   3.5382918111479464`*^9}, {3.5382920300954695`*^9, 
+   3.5382920323415976`*^9}, {3.538292457770931*^9, 3.5382924981852427`*^9}, 
+   3.538293485834733*^9, {3.538391267883547*^9, 3.5383913088438897`*^9}, {
+   3.538391345350978*^9, 3.5383914136208825`*^9}, {3.5383917861101875`*^9, 
+   3.5383917994369497`*^9}, {3.5383939289777527`*^9, 
+   3.5383939296367903`*^9}, {3.5383939615436153`*^9, 
+   3.5383939677219687`*^9}, {3.538394040453129*^9, 3.5383940409011545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Y", "+", "\[CapitalDelta]Y", "+", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Psi]", " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[CapitalPhi]", " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"m", " ", "r", " ", "Ve"}], "+", 
+   RowBox[{"m", " ", 
+    SuperscriptBox["v", "\[Prime]",
+     MultilineFunction->None]}]}]}]], "Output",
+ CellChangeTimes->{{3.5382915582024784`*^9, 3.538291581807829*^9}, 
+   3.5382917351215973`*^9, 3.538291812887046*^9, 3.538292033997692*^9, 
+   3.5382934997385283`*^9, 3.538372486764451*^9, {3.5383913052286825`*^9, 
+   3.5383913476201077`*^9}, 3.538391416533049*^9, 3.5383918026631346`*^9, 
+   3.5383918921012497`*^9, 3.5383939695850754`*^9, 3.5383942724153957`*^9}]
+}, Open  ]],
+
+Cell["\<\
+Il termine g m Sin[\[Psi]] va via insieme a Y\
+\>", "Text",
+ CellChangeTimes->{{3.5383943044572287`*^9, 3.538394357559266*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.538293688029298*^9, 3.5382936889193487`*^9}, 
+   3.5382938652564344`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"forzeZwind", "=", 
+  RowBox[{"TrigExpand", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"+", "L"}], "+", "\[CapitalDelta]L", "-", 
+     RowBox[{"m", "*", "g", "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}], 
+      "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}], "*", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"\[Psi]", "+", "\[CapitalDelta]\[Psi]"}], "]"}]}], "-", 
+     RowBox[{"m", "*", "g", "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}], 
+      "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"\[Psi]", "+", "\[CapitalDelta]\[Psi]"}], "]"}]}]}], "==", 
+    RowBox[{"m", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"w", "'"}], "+", 
+       RowBox[{"Ve", "*", "q"}]}], ")"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.538292741845179*^9, 3.5382928902886696`*^9}, 
+   3.5382934208400154`*^9, {3.5382934897079544`*^9, 3.538293490242985*^9}, {
+   3.538372939666356*^9, 3.5383729426495266`*^9}, {3.538391812424693*^9, 
+   3.5383918136967654`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"L", "+", "\[CapitalDelta]L", "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"m", " ", "q", " ", "Ve"}], "+", 
+   RowBox[{"m", " ", 
+    SuperscriptBox["w", "\[Prime]",
+     MultilineFunction->None]}]}]}]], "Output",
+ CellChangeTimes->{{3.538292864152175*^9, 3.538292891637747*^9}, 
+   3.5382934221010876`*^9, 3.5382935008515916`*^9, 3.5383729565123196`*^9, 
+   3.5383918171899652`*^9, 3.538391892152253*^9, 3.538394272466399*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"forzeZwind", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{"\[CapitalPhi]", "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.5382929000222263`*^9, 3.5382929004052477`*^9}, 
+   3.538293493779187*^9, {3.538391820219138*^9, 3.5383918329358664`*^9}, {
+   3.5383939880041285`*^9, 3.5383939952475433`*^9}, {3.5383940444213552`*^9, 
+   3.5383940448043776`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"L", "+", "\[CapitalDelta]L", "-", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Theta]", " ", 
+    RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", 
+    RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "-", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[CapitalPhi]", " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}], "+", 
+   RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Psi]", " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+    RowBox[{"Sin", "[", "\[Psi]", "]"}]}]}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"m", " ", "q", " ", "Ve"}], "+", 
+   RowBox[{"m", " ", 
+    SuperscriptBox["w", "\[Prime]",
+     MultilineFunction->None]}]}]}]], "Output",
+ CellChangeTimes->{3.5382929032794123`*^9, 3.538293423417163*^9, 
+  3.5382935017746444`*^9, 3.538372960437544*^9, 3.5383918354010067`*^9, 
+  3.538391892173254*^9, 3.5383939982947173`*^9, 3.5383942724924*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.5383715785845065`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"gravit\[AGrave]X", "=", 
+   RowBox[{"TrigExpand", "[", 
+    RowBox[{
+     RowBox[{"-", "m"}], "*", "g", "*", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.5383715847068567`*^9, 3.538371608732231*^9}, {
+  3.538391443744605*^9, 3.5383915099423914`*^9}, {3.5383916445320897`*^9, 
+  3.53839165765084*^9}, {3.5383918401322775`*^9, 3.538391841444352*^9}, {
+  3.538392090644606*^9, 3.5383920994911118`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "g"}], " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.538391510879445*^9, 3.5383916593519373`*^9, {3.5383918861179075`*^9, 
+   3.538391892201256*^9}, 3.5383921086456356`*^9, 3.5383942725214024`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "in", " ", "realt\[AGrave]", " ", "\[Phi]", " ", "non", " ", "ocmpare", 
+      " ", "proprio", " ", "in", " ", "questa", " ", "equazione"}], ")"}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"gravit\[AGrave]X", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.538391580301416*^9, 3.538391581580489*^9}, {
+   3.538391843599476*^9, 3.538391851310917*^9}, 3.538392104853419*^9, {
+   3.5383935749965057`*^9, 3.538393597844813*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "g"}], " ", "m", " ", "\[CapitalDelta]\[Theta]", " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.5383915828445616`*^9, 3.5383916604109983`*^9, 3.538391852744999*^9, {
+   3.538391887795004*^9, 3.5383918922212567`*^9}, 3.5383921102147255`*^9, 
+   3.538393576536594*^9, 3.5383942725434036`*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.5383921167630997`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gravit\[AGrave]Y", "=", 
+  RowBox[{"TrigExpand", "[", 
+   RowBox[{"m", "*", "g", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}], "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.538392119069232*^9, 3.538392211030492*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}]}]], "Output",
+ CellChangeTimes->{3.538392213390627*^9, 3.538394272568405*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"gravit\[AGrave]Y", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{"\[CapitalPhi]", "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.5383922246312695`*^9, 3.538392226679387*^9}, {
+  3.5383923293022566`*^9, 3.538392336627675*^9}, {3.538393517511218*^9, 
+  3.538393562463789*^9}}],
+
+Cell[BoxData[
+ RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[CapitalPhi]", " ", 
+  RowBox[{"Cos", "[", "\[Theta]", "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.5383922276894445`*^9, {3.5383923201477327`*^9, 3.538392337562729*^9}, 
+   3.538393564469904*^9, 3.538394272587406*^9}]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.5383940974073863`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gravit\[AGrave]Z", "=", 
+  RowBox[{"TrigExpand", "[", 
+   RowBox[{"m", "*", "g", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"\[Theta]", "+", "\[CapitalDelta]\[Theta]"}], "]"}], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"\[CapitalPhi]", "+", "\[CapitalDelta]\[CapitalPhi]"}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.538394104971819*^9, {3.5383941443710723`*^9, 3.538394144786096*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}], "+", 
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
+   RowBox[{"Sin", "[", "\[CapitalPhi]", "]"}]}]}]], "Output",
+ CellChangeTimes->{3.5383941469102173`*^9, 3.5383942726124077`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Linearizzo", " ", "e", " ", "impongo", " ", "che", " ", "\[Phi]", " ", 
+    "di", " ", "equilibrio", " ", "sia", " ", "0"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"gravit\[AGrave]Z", "//.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "1"}], ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", "1"}], 
+     ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[CapitalPhi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[CapitalPhi]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Theta]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Theta]"}], ",", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[CapitalDelta]\[Psi]", "]"}], "\[Rule]", 
+      "\[CapitalDelta]\[Psi]"}], ",", 
+     RowBox[{
+      RowBox[{
+      "\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[CapitalPhi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[Theta]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{
+      RowBox[{"\[CapitalDelta]\[CapitalPhi]", "*", "\[CapitalDelta]\[Psi]"}], 
+      "\[Rule]", "0"}], ",", 
+     RowBox[{"\[CapitalPhi]", "\[Rule]", "0"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{3.5383941543706446`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", " ", "m", " ", 
+   RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+  RowBox[{"g", " ", "m", " ", "\[CapitalDelta]\[Theta]", " ", 
+   RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}]], "Output",
+ CellChangeTimes->{3.5383941556807194`*^9, 3.5383942726304083`*^9}]
+}, Open  ]]
+},
+WindowSize->{1272, 897},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 629, 14, 35, "Input"],
+Cell[1199, 38, 1355, 28, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2591, 71, 1817, 45, 80, "Input"],
+Cell[4411, 118, 804, 17, 35, "Output"]
+}, Open  ]],
+Cell[5230, 138, 141, 2, 58, "Input"],
+Cell[CellGroupData[{
+Cell[5396, 144, 1286, 30, 35, "Input"],
+Cell[6685, 176, 4449, 85, 146, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11171, 266, 2039, 47, 80, "Input"],
+Cell[13213, 315, 965, 19, 35, "Output"]
+}, Open  ]],
+Cell[14193, 337, 137, 3, 34, "Text"],
+Cell[14333, 342, 141, 2, 58, "Input"],
+Cell[CellGroupData[{
+Cell[14499, 348, 1157, 28, 35, "Input"],
+Cell[15659, 378, 4550, 86, 146, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20246, 469, 1677, 42, 80, "Input"],
+Cell[21926, 513, 1018, 21, 35, "Output"]
+}, Open  ]],
+Cell[22959, 537, 89, 1, 58, "Input"],
+Cell[CellGroupData[{
+Cell[23073, 542, 556, 12, 58, "Input"],
+Cell[23632, 556, 506, 11, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24175, 572, 1759, 44, 58, "Input"],
+Cell[25937, 618, 462, 10, 35, "Output"]
+}, Open  ]],
+Cell[26414, 631, 89, 1, 58, "Input"],
+Cell[CellGroupData[{
+Cell[26528, 636, 399, 9, 35, "Input"],
+Cell[26930, 647, 1154, 22, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28121, 674, 1599, 41, 80, "Input"],
+Cell[29723, 717, 277, 5, 35, "Output"]
+}, Open  ]],
+Cell[30015, 725, 89, 1, 58, "Input"],
+Cell[CellGroupData[{
+Cell[30129, 730, 426, 10, 35, "Input"],
+Cell[30558, 742, 1158, 22, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31753, 769, 1475, 39, 80, "Input"],
+Cell[33231, 810, 292, 6, 35, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

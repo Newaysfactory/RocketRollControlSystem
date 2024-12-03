@@ -1,0 +1,3 @@
+//Visto che la periferica SPI non è simulata, bisogna azzerare a mano
+//il bit SSPIF del registro PIR1. L'8 corrisponde a 00001000
+8
