@@ -20,5 +20,5 @@ Repository containing code, documentation and other about my master's degree the
 * **Rocket drawings** 3D CAD mechanical drawings of the rocket and of the control system in McNeel Rhinoceros format
 * **RocksimModel** Rocksim model to simulate the rocket stability and simulate the flight
 
-## Known HW and SW issues and limitations:
+## Known issues and limitations:
 * Roll angle, rate and acceleration in output from the roll Kalman fileter are not fully coherent. I never investigate further.
